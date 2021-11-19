@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+body{
+    background-color: rgb(15, 15, 15);
+    background-image: url(./images/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* nav */
+
+nav{
+    width: 100%;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+}
+
+.titulo{
+    padding-top: 30px;
+    width: 400px;
+    height: 240px;
+    margin: auto;
+}
+
+.titulo img{
+    object-fit: cover;
+    width: 400px;
+    height: 160px;
+}
+
+.titulo h1{
+    color: rgb(231, 0, 0);
+    font-family: 'Open Sans'
+}
+
+.links_menu{
+    font-family: 'Open Sans', sans-serif;
+    list-style: none;
+    display: flex;
+    gap: 60px;
+    font-size: 22px;
+    padding-right: 30px;
+}
+
+.links_menu a{
+    text-decoration: none;
+    color: white;
+    position: relative; 
+    padding: 5px;    
+}
+
+.links_menu a:hover{
+    color: rgb(204, 59, 59);
+}
+
+.links_menu a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #790000, #aa0000, #c00000);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.3s ease-in-out;
+}
+
+.links_menu a:hover::before {
+    transform: scaleX(0.7);
+}
+
+.links_menu[data-animation="center"] a::before{
+    transform-origin: center;
+}
+
+/* carousel */
+
+.seccion_carousel{
+    width: 100%;
+    height: 510px;
+}
+
+.d-block.w-100{
+    object-fit: cover;
+    height: 500px;
+}
+
+/* Planes */
+
+.seccion_planes{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    gap: 1px;
+}
+
+.plan1{
+    width: 49.8%;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(./images/gym4.jpg);
+    background-size: cover;
+    position: relative;
+    border-radius: 10px;
+    border: 3px solid rgb(0, 0, 0);
+}
+
+.plan2{
+    width: 49.8%;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(./images/gym5.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 10px;
+    border: 3px solid rgb(0, 0, 0);
+}
+
+.info_plan1{
+    width: 100%;
+    height: 394px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    text-align: center;
+    opacity: 0;
+    transition: .6s all;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 3px;
+}
+
+.info_plan2{
+    width: 100%;
+    height: 394px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    text-align: center;
+    opacity: 0;
+    transition: .6s all;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.plan1:hover .info_plan1{
+    opacity: 1;
+}
+
+.plan2:hover .info_plan2{
+    opacity: 1;
+}
+
+.plan1 h3{
+    font-family: 'Fugaz One', cursive;
+    color: rgba(255, 0, 0, 0.842);
+    font-size: 50px;
+    padding-top: 20px;
+    text-shadow: 5px 0px 0px rgb(129, 0, 0);
+}
+
+.plan2 h3{
+    font-family: 'Fugaz One', cursive;
+    color: rgba(255, 0, 0, 0.842);
+    font-size: 50px;
+    padding-top: 20px;
+    text-shadow: 5px 0px 0px rgb(129, 0, 0);
+}
+
+.plan1 h4{
+    color: white;
+}
+
+.plan2 h4{
+    color: white;
+}
+
+.info_h{
+    color: white;
+    top: 0;
+}
+
+.info_h p{
+    font-size: 20px;
+    font-family: 'Open Sans'
+}
+
+.plan_tit{
+    width: 100%;
+    text-align: center;
+}
+
+.pb{
+    left: 316px;
+    position: absolute;
+}
+
+.pp{
+    position: absolute;
+    left: 1243px;
+}
+
+/* Sobre Nosotros */
+
+.seccion_nosotros{
+    width: 100%;
+    height: 1000px;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.431);
+    backdrop-filter: blur(5px);
+}
+
+.info_fc{
+    display: flex;
+    padding-top: 47px;
+}
+
+.titulo_nosotros{
+    font-family: 'Fugaz One', cursive;
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+    padding-left: 300px;
+}
+
+.titulo_nosotros1{
+    font-family: 'Fugaz One', cursive;
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+    padding-left: 300px;
+}
+
+
+.info_nosotros{
+    width: 500px;
+    margin-left: 400px;
+    font-size: 22px;
+}
+
+.info_nosotros p{
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+}
+
+.programas{
+    width: 500px;
+    margin-left: 360px;
+    font-size: 22px;
+}
+
+.programas p{
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+
+.programas2{
+    width: 500px;
+    font-size: 22px;
+}
+
+.programas2 p{
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+
+.info_fc2{
+    display: flex;
+    padding-top: 150px;
+}
